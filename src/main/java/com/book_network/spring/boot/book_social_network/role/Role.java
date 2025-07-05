@@ -35,7 +35,7 @@ public class Role {
         @GeneratedValue
         private Integer id;
 
-        @Column(unique = true, nullable = false)
+        @Column(unique = true)
         private String name;
 
         @ManyToMany(mappedBy = "roles")
@@ -44,7 +44,7 @@ public class Role {
 
 
         @CreatedDate
-        @Column(nullable = false, updatable = false)
+        @Column(nullable = false)
         private LocalDateTime createdDate;
 
         @LastModifiedDate
